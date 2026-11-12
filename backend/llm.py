@@ -13,7 +13,7 @@ from prompts.prompts import build_prompt
 def get_llm() -> ChatGoogleGenerativeAI:
     if not config.GEMINI_API_KEY:
         raise RuntimeError(
-            "GEMINI_API_KEY is missing. Add it to your .env file."
+            "GEMINI_API_KEY is missing. Check your environment or Streamlit Secrets."
         )
 
     return ChatGoogleGenerativeAI(
@@ -34,10 +34,8 @@ def invoke_json(system: str, human: str, **variables) -> dict:
     for _ in range(2):
         try:
             result = chain.invoke(variables)
-
             if isinstance(result, dict):
                 return result
-
         except Exception as exc:
             last_error = exc
 
