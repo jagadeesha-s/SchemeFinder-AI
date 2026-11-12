@@ -1,0 +1,13 @@
+{
+  "_readme": "Map each file in this folder to its official details. Only official_url values written here (or found inside the documents) are ever shown as links. Remove the two sample entries when you add real PDFs.",
+  "pm_kisan_sample.txt": {
+    "scheme_name": "Pradhan Mantri Kisan Samman Nidhi (PM-KISAN)",
+    "department": "Ministry of Agriculture and Farmers Welfare, Government of India",
+    "official_url": "https://pmkisan.gov.in"
+  },
+  "pm_jay_sample.txt": {
+    "scheme_name": "Ayushman Bharat Pradhan Mantri Jan Arogya Yojana (PM-JAY)",
+    "department": "National Health Authority, Ministry of Health and Family Welfare, Government of India",
+    "official_url": "https://pmjay.gov.in"
+  }
+}

@@ -1,0 +1,14 @@
+# Environment and secrets
+.env
+.streamlit/secrets.toml
+
+# Python
+venv/
+__pycache__/
+*.pyc
+
+# Vector database
+chroma_db/
+
+# Editor settings
+.vscode/
