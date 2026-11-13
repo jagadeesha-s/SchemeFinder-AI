@@ -5,8 +5,16 @@ import config
 from backend.ingestion import ingest_directory
 from backend.orchestrator import SchemeFinderOrchestrator
 
-st.set_page_config(page_title="SchemeFinder AI", page_icon="🏛️", layout="wide")
+st.set_page_config(page_title="SchemeFinder AI", page_icon="🏛️", 
+    page_title="SchemeFinder AI | Government Scheme Finder India",layout="wide")
+st.title("SchemeFinder AI")
+st.header("Find Government Schemes Across India")
 
+st.write(
+    "Discover Central and State Government schemes, "
+    "check eligibility, find scholarships and get "
+    "guidance on how to apply."
+)
 st.markdown(
     """
 <style>
@@ -175,7 +183,7 @@ if c1.button("🔍 Discover Schemes"):
     mode = "discover"
 if c2.button("✅ Check Eligibility"):
     mode = "eligibility"
-if c3.button("📋 Application Guidance"):
+if c3.button("📋 Apply Application"):
     mode = "application"
 
 if mode:
