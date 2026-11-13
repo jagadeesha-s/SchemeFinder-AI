@@ -5,7 +5,7 @@ import config
 from backend.ingestion import ingest_directory
 from backend.orchestrator import SchemeFinderOrchestrator
 
-st.set_page_config(page_title="SchemeFinder AI", page_icon="🏛️", 
+st.set_page_config( page_icon="🏛️", 
     page_title="SchemeFinder AI | Government Scheme Finder India",layout="wide")
 st.title("SchemeFinder AI")
 st.header("Find Government Schemes Across India")
