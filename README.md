@@ -1,7 +1,10 @@
 # SchemeFinder AI – Government Scheme Eligibility Navigator
 
+Live Website: https://schemefinder-ai.streamlit.app/
+
+Find Indian government schemes and check your eligibility using AI.
 Multi-agent RAG app: Intent Router → Retrieval → Eligibility → Application → Explainer.
-Stack: Streamlit, LangChain, Claude API, ChromaDB, HuggingFace embeddings, pypdf.
+Stack: Streamlit, LangChain, gemini API, ChromaDB, HuggingFace embeddings, pypdf.
 
 ## Folder structure
 ```
