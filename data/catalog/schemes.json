@@ -1,0 +1,146 @@
+{
+  "_readme": "Starter catalog. Every entry is UNVERIFIED (last_verified = null). Check each field against the official portal/PDF, then set last_verified to the date (YYYY-MM-DD). Leave a field null if the official document does not state it. Add new schemes by copying an entry.",
+  "schemes": [
+    {
+      "id": "pm-kisan", "scheme_name": "Pradhan Mantri Kisan Samman Nidhi (PM-KISAN)", "aliases": ["PM-KISAN", "PM Kisan"],
+      "category": "Agriculture", "department": "Ministry of Agriculture and Farmers Welfare", "level": "Central", "applicable_state": "All India",
+      "eligibility": ["Landholding farmer families", "Not eligible: institutional landholders, holders of constitutional posts, serving/retired government officers (except MTS/Class IV/Group D), income tax payers, and registered professionals such as doctors, engineers, lawyers, CAs"],
+      "income_limit": "No income limit stated; income tax payers are excluded",
+      "benefits": "Rs 6,000 per year in three equal instalments of Rs 2,000, paid directly to the bank account",
+      "required_documents": ["Aadhaar", "Land records", "Bank account details"],
+      "application_process": ["Register on the official PM-KISAN portal (Farmers Corner) or through a Common Service Centre", "Details are verified by the State government"],
+      "official_url": "https://pmkisan.gov.in", "source_document": "Starter catalog entry (verify against PM-KISAN operational guidelines)", "last_verified": null, "deadline": null
+    },
+    {
+      "id": "pmfby", "scheme_name": "Pradhan Mantri Fasal Bima Yojana (PMFBY)", "aliases": ["PM Fasal Bima Yojana", "PMFBY"],
+      "category": "Agriculture", "department": "Ministry of Agriculture and Farmers Welfare", "level": "Central", "applicable_state": "All India (states notify crops and areas)",
+      "eligibility": ["Farmers growing notified crops in notified areas, including sharecroppers and tenant farmers"],
+      "income_limit": "No income limit stated",
+      "benefits": "Insurance cover against crop loss from natural calamities, pests and diseases; farmers pay a low fixed premium (2% kharif, 1.5% rabi food crops and oilseeds, 5% commercial/horticultural crops)",
+      "required_documents": [], "application_process": ["Apply through your bank, a Common Service Centre, an insurance company agent or the official PMFBY portal before the cut-off date for the season"],
+      "official_url": "https://pmfby.gov.in", "source_document": "Starter catalog entry (verify against current PMFBY guidelines)", "last_verified": null, "deadline": "Varies by crop season and state - check the portal"
+    },
+    {
+      "id": "pmjay", "scheme_name": "Ayushman Bharat Pradhan Mantri Jan Arogya Yojana (PM-JAY)", "aliases": ["Ayushman Bharat", "PM-JAY", "PMJAY"],
+      "category": "Healthcare", "department": "National Health Authority, Ministry of Health and Family Welfare", "level": "Central", "applicable_state": "All India (implementation varies by state)",
+      "eligibility": ["Families identified through SECC 2011 deprivation and occupational criteria, plus categories added by states", "No cap on family size or age", "Senior citizens aged 70 and above are eligible regardless of income"],
+      "income_limit": "No income limit for the 70+ senior citizen category; other families are selected by deprivation criteria",
+      "benefits": "Health cover of up to Rs 5 lakh per family per year for hospitalisation at empanelled hospitals",
+      "required_documents": [], "application_process": ["Check eligibility on the official portal using mobile number or ration card details", "Get an Ayushman card at an empanelled hospital, Ayushman Mitra desk or Common Service Centre"],
+      "official_url": "https://pmjay.gov.in", "source_document": "Starter catalog entry (verify against PM-JAY guidelines)", "last_verified": null, "deadline": null
+    },
+    {
+      "id": "pmay-urban", "scheme_name": "Pradhan Mantri Awas Yojana - Urban (PMAY-U)", "aliases": ["PMAY-Urban", "PMAY Urban", "PMAY-U 2.0"],
+      "category": "Housing", "department": "Ministry of Housing and Urban Affairs", "level": "Central", "applicable_state": "All India (urban areas)",
+      "eligibility": ["Urban families belonging to EWS, LIG or MIG segments", "The family should not own a pucca house anywhere in India"],
+      "income_limit": "Annual household income limits apply by segment (EWS/LIG/MIG) - confirm current limits on the official portal",
+      "benefits": "Central assistance for house purchase, construction or enhancement as per the scheme component", 
+      "required_documents": [], "application_process": ["Apply through the official PMAY-Urban portal or through the Urban Local Body / bank as directed"],
+      "official_url": "https://pmay-urban.gov.in", "source_document": "Starter catalog entry (verify against current PMAY-U guidelines)", "last_verified": null, "deadline": null
+    },
+    {
+      "id": "pmay-gramin", "scheme_name": "Pradhan Mantri Awas Yojana - Gramin (PMAY-G)", "aliases": ["PMAY-Gramin", "PMAY Gramin", "PMAY-G"],
+      "category": "Housing", "department": "Ministry of Rural Development", "level": "Central", "applicable_state": "All India (rural areas)",
+      "eligibility": ["Houseless families and families living in kutcha or dilapidated houses in rural areas, selected from the official beneficiary list (Awaas+/SECC)"],
+      "income_limit": "Selection is by housing deprivation criteria, not a single income limit",
+      "benefits": "Financial assistance to build a pucca house (Rs 1.20 lakh in plains and Rs 1.30 lakh in hilly/difficult areas) plus related convergence support",
+      "required_documents": [], "application_process": ["Beneficiaries are identified through the Gram Sabha and the official list; contact your Gram Panchayat or Block office"],
+      "official_url": "https://pmayg.nic.in", "source_document": "Starter catalog entry (verify against current PMAY-G guidelines)", "last_verified": null, "deadline": null
+    },
+    {
+      "id": "pmmvy", "scheme_name": "Pradhan Mantri Matru Vandana Yojana (PMMVY)", "aliases": ["PM Matru Vandana Yojana", "PMMVY"],
+      "category": "Women & Child", "department": "Ministry of Women and Child Development", "level": "Central", "applicable_state": "All India",
+      "eligibility": ["Pregnant women and lactating mothers aged 19 years or above", "Women in regular government employment or covered by similar benefits under other laws are excluded"],
+      "income_limit": "No income limit stated",
+      "benefits": "Cash incentive for the first living child and, under current rules, for a second child if a girl - confirm amounts and instalments on the official portal",
+      "required_documents": [], "application_process": ["Register through the nearest Anganwadi Centre / health facility or the official PMMVY portal"],
+      "official_url": "https://pmmvy.wcd.gov.in", "source_document": "Starter catalog entry (verify against current PMMVY guidelines)", "last_verified": null, "deadline": null
+    },
+    {
+      "id": "vb-g-ram-g", "scheme_name": "Viksit Bharat - Guarantee for Rozgar and Ajeevika Mission (Gramin) (VB-G RAM G), earlier MGNREGA", "aliases": ["MGNREGA", "MGNREGS", "VB-G RAM G", "VB G RAM G", "Mahatma Gandhi NREGA"],
+      "category": "Employment", "department": "Ministry of Rural Development", "level": "Central", "applicable_state": "All India (rural areas)",
+      "eligibility": ["Rural households whose adult members volunteer for unskilled manual work", "Valid job card (existing e-KYC verified MGNREGA job cards remain valid until new cards are issued, per Ministry statement)"],
+      "income_limit": "No income limit stated",
+      "benefits": "Guaranteed wage employment of up to 125 days per rural household per financial year under the VB-G RAM G Act, 2025, which replaced MGNREGA from 1 July 2026",
+      "required_documents": [], "application_process": ["Apply for work through your Gram Panchayat using your job card"],
+      "official_url": "https://rural.gov.in", "source_document": "Starter catalog entry based on news reports of the Act's commencement (verify on the Ministry of Rural Development website)", "last_verified": null, "deadline": null
+    },
+    {
+      "id": "pm-vishwakarma", "scheme_name": "PM Vishwakarma", "aliases": ["PM Vishwakarma Yojana"],
+      "category": "Employment", "department": "Ministry of Micro, Small and Medium Enterprises", "level": "Central", "applicable_state": "All India",
+      "eligibility": ["Artisans and craftspeople working with hands and tools in the traditional trades listed by the scheme", "Minimum age 18 years", "Not eligible: persons in government service"],
+      "income_limit": "No income limit stated",
+      "benefits": "PM Vishwakarma certificate and ID card, skill training with stipend, toolkit incentive, and collateral-free credit support - confirm amounts on the official portal",
+      "required_documents": ["Aadhaar", "Mobile number linked to Aadhaar", "Bank account details"],
+      "application_process": ["Register at a Common Service Centre or on the official portal with Aadhaar-based authentication", "Verification by the Gram Panchayat / Urban Local Body and district committee"],
+      "official_url": "https://pmvishwakarma.gov.in", "source_document": "Starter catalog entry (verify against PM Vishwakarma guidelines)", "last_verified": null, "deadline": null
+    },
+    {
+      "id": "csss", "scheme_name": "Central Sector Scheme of Scholarship for College and University Students", "aliases": ["Central Sector Scholarship", "CSSS"],
+      "category": "Education", "department": "Department of Higher Education, Ministry of Education", "level": "Central", "applicable_state": "All India",
+      "eligibility": ["Students who scored above the cut-off percentile in the Class 12 board examination and are pursuing regular college/university courses"],
+      "income_limit": "Family income limit applies - confirm the current limit on the National Scholarship Portal",
+      "benefits": "Annual scholarship for graduation and post-graduation studies - confirm current amounts on the official portal",
+      "required_documents": [], "application_process": ["Apply online on the National Scholarship Portal during the open window"],
+      "official_url": "https://scholarships.gov.in", "source_document": "Starter catalog entry (verify on the National Scholarship Portal)", "last_verified": null, "deadline": "Announced yearly on the portal"
+    },
+    {
+      "id": "nsp", "scheme_name": "National Scholarship Portal (NSP)", "aliases": ["NSP", "National Scholarship Portal"],
+      "category": "Education", "department": "Government of India (hosted by the Ministry of Electronics and IT for several ministries)", "level": "Central", "applicable_state": "All India",
+      "eligibility": ["Eligibility differs for each scholarship listed on the portal - open the scheme's page for its criteria"],
+      "income_limit": null, "benefits": "Varies by scholarship scheme listed on the portal",
+      "required_documents": [], "application_process": ["Register on the portal, choose the scholarship you qualify for, and submit the online application"],
+      "official_url": "https://scholarships.gov.in", "source_document": "Starter catalog entry (portal)", "last_verified": null, "deadline": "Announced yearly on the portal"
+    },
+    {
+      "id": "ssp-karnataka", "scheme_name": "State Scholarship Portal (SSP), Karnataka", "aliases": ["SSP", "SSP Karnataka", "State Scholarship Portal"],
+      "category": "Education", "department": "Government of Karnataka (multiple departments)", "level": "State", "applicable_state": "Karnataka",
+      "eligibility": ["Karnataka domicile students; eligibility differs for each pre-matric/post-matric scholarship on the portal"],
+      "income_limit": null, "benefits": "Varies by scholarship scheme on the portal",
+      "required_documents": [], "application_process": ["Create an account on the SSP portal and apply for the scholarship you qualify for"],
+      "official_url": "https://ssp.karnataka.gov.in", "source_document": "Starter catalog entry (portal)", "last_verified": null, "deadline": "Announced yearly on the portal"
+    },
+    {
+      "id": "pm-usp", "scheme_name": "Prime Minister's Special Scholarship Scheme (PM-USP)", "aliases": ["PM-USP", "PMSSS"],
+      "category": "Education", "department": "Ministry of Education / AICTE", "level": "Central", "applicable_state": "Jammu and Kashmir, Ladakh (domicile students)",
+      "eligibility": ["Domicile students of Jammu and Kashmir and Ladakh seeking admission to eligible institutions outside the region - confirm details on the official portal"],
+      "income_limit": null, "benefits": null, "required_documents": [], "application_process": [],
+      "official_url": null, "source_document": "Starter catalog entry (details not yet filled - add from the official document)", "last_verified": null, "deadline": null
+    },
+    {
+      "id": "pm-yasasvi", "scheme_name": "PM YASASVI (OBC, EBC and DNT scholarships)", "aliases": ["PM-YASASVI", "PM YASASVI"],
+      "category": "SC/ST/OBC Welfare", "department": "Ministry of Social Justice and Empowerment", "level": "Central", "applicable_state": "All India",
+      "eligibility": ["Students belonging to OBC, EBC and DNT communities - confirm class-wise criteria on the official portal"],
+      "income_limit": "Family income limit applies - confirm the current limit on the official portal",
+      "benefits": "Scholarships for school and higher education - confirm amounts on the official portal",
+      "required_documents": [], "application_process": ["Apply online on the National Scholarship Portal"],
+      "official_url": "https://scholarships.gov.in", "source_document": "Starter catalog entry (verify on the National Scholarship Portal)", "last_verified": null, "deadline": "Announced yearly on the portal"
+    },
+    {
+      "id": "pm-ajay", "scheme_name": "Pradhan Mantri Anusuchit Jaati Abhyuday Yojana (PM-AJAY)", "aliases": ["PM-AJAY", "PM AJAY"],
+      "category": "SC/ST/OBC Welfare", "department": "Department of Social Justice and Empowerment", "level": "Central", "applicable_state": "All India",
+      "eligibility": ["Scheduled Caste communities; the scheme mainly funds area and institutional development (such as SC-majority villages and hostels) - confirm individual benefits in the official guidelines"],
+      "income_limit": null, "benefits": null, "required_documents": [], "application_process": [],
+      "official_url": "https://socialjustice.gov.in", "source_document": "Starter catalog entry (details not yet filled - add from the official guidelines)", "last_verified": null, "deadline": null
+    },
+    {
+      "id": "pm-mudra", "scheme_name": "Pradhan Mantri MUDRA Yojana (PMMY)", "aliases": ["PM Mudra Yojana", "Mudra loan", "PMMY"],
+      "category": "Business", "department": "Ministry of Finance (MUDRA)", "level": "Central", "applicable_state": "All India",
+      "eligibility": ["Non-corporate, non-farm small and micro enterprises needing business loans"],
+      "income_limit": "No income limit stated",
+      "benefits": "Collateral-free loans in Shishu (up to Rs 50,000), Kishore (Rs 50,000 to Rs 5 lakh) and Tarun (Rs 5 lakh to Rs 10 lakh) categories, with a higher Tarun Plus category announced later - confirm on the official portal",
+      "required_documents": ["Identity and address proof", "Business details as required by the lending institution"],
+      "application_process": ["Apply at a bank, NBFC or microfinance institution, or through the official online loan portal"],
+      "official_url": "https://www.mudra.org.in", "source_document": "Starter catalog entry (verify on the MUDRA website)", "last_verified": null, "deadline": null
+    },
+    {
+      "id": "pmegp", "scheme_name": "Prime Minister's Employment Generation Programme (PMEGP)", "aliases": ["PMEGP"],
+      "category": "Business", "department": "Ministry of Micro, Small and Medium Enterprises (implemented by KVIC)", "level": "Central", "applicable_state": "All India",
+      "eligibility": ["Individuals aged 18 and above setting up a new micro enterprise", "Education requirement applies for higher project costs - confirm on the official portal"],
+      "income_limit": "No income limit stated",
+      "benefits": "Government subsidy on the project cost linked to a bank loan; subsidy rate depends on category and rural/urban location - confirm current rates",
+      "required_documents": [], "application_process": ["Apply online on the PMEGP e-portal; the application is processed through KVIC/KVIB/DIC and a bank"],
+      "official_url": "https://www.kviconline.gov.in/pmegpeportal", "source_document": "Starter catalog entry (verify on the PMEGP portal)", "last_verified": null, "deadline": null
+    }
+  ]
+}

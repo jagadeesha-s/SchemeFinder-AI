@@ -1,13 +1,8 @@
 {
-  "_readme": "Map each file in this folder to its official details. Only official_url values written here (or found inside the documents) are ever shown as links. Remove the two sample entries when you add real PDFs.",
-  "pm_kisan_sample.txt": {
-    "scheme_name": "Pradhan Mantri Kisan Samman Nidhi (PM-KISAN)",
-    "department": "Ministry of Agriculture and Farmers Welfare, Government of India",
-    "official_url": "https://pmkisan.gov.in"
-  },
-  "pm_jay_sample.txt": {
-    "scheme_name": "Ayushman Bharat Pradhan Mantri Jan Arogya Yojana (PM-JAY)",
-    "department": "National Health Authority, Ministry of Health and Family Welfare, Government of India",
-    "official_url": "https://pmjay.gov.in"
+  "_readme": "For each official PDF you add to this folder, add an entry keyed by file name. Optional keys: scheme_name, department, official_url, category (one of Education, Agriculture, Healthcare, Housing, Women & Child, Employment, SC/ST/OBC Welfare, Business), level (Central/State), applicable_state, source_document, last_verified (YYYY-MM-DD).",
+  "_example.pdf": {
+    "scheme_name": "Example Scheme", "department": "Example Ministry", "official_url": "https://example.gov.in",
+    "category": "Education", "level": "Central", "applicable_state": "All India",
+    "source_document": "Example guidelines 2025", "last_verified": "2026-01-01"
   }
 }

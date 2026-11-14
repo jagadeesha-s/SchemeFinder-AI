@@ -42,6 +42,10 @@ ELIGIBILITY_FORMAT = """{
       "scheme_name": "exact name as in the documents",
       "department": "ministry/department stated in the excerpts, or null",
       "description": "one or two sentences from the excerpts",
+      "scheme_level": "Central | State | null",
+      "applicable_state": "state(s) the scheme applies to, or null",
+      "income_limit": "income limit stated in the excerpts, or null",
+      "benefits": "benefits stated in the excerpts, or null",
       "eligibility_criteria": ["criterion stated in the excerpts", "..."],
       "status": "eligible | ineligible | potentially_eligible",
       "reasons": ["why this status, comparing the user's profile with each criterion"],
@@ -66,7 +70,7 @@ STRICT RULES
    verified from the profile (e.g. land ownership, tax status, ration card, disability).
 5. NEVER assume missing information. Put it under missing_information and questions_for_user.
 6. Every scheme must cite at least one source id (like "S1") from the excerpts you used.
-7. Income is in INR per year. State names must match exactly when a scheme is state-specific.
+7. Income is in INR per year. If a scheme applies only to specific states/regions and the user's state is different, status is "ineligible". If the user's state is unknown, use "potentially_eligible".
 8. If no excerpt is relevant, return an empty "schemes" list.
 Return ONLY valid JSON in this format:
 {output_format}"""

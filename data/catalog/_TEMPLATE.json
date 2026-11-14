@@ -1,0 +1,47 @@
+{
+  "_readme": "Copy this file to e.g. data/catalog/education_central.json (no leading underscore), keep the 'schemes' list and fill ONE object per scheme from an OFFICIAL source. Use null for anything the official document does not state - never guess. Only set rules_complete to true when the structured rules below capture ALL official eligibility conditions and you checked them (set last_verified too).",
+  "schemes": [
+    {
+      "id": "unique-lowercase-id",
+      "scheme_name": "Official scheme name",
+      "aliases": ["Short name"],
+      "category": "Education",
+      "additional_categories": ["SC/ST/OBC Welfare"],
+      "level": "Central",
+      "applicable_state": "All India",
+      "department": "Ministry / Department name",
+      "short_description": "One or two sentences.",
+      "detailed_description": null,
+      "eligibility": ["Condition exactly as the official document states it"],
+      "min_age": null,
+      "max_age": null,
+      "gender": null,
+      "social_categories": null,
+      "income_limit_annual": null,
+      "income_limit": null,
+      "occupations": null,
+      "min_education": null,
+      "land_required": null,
+      "benefits": "Benefit as stated officially",
+      "required_documents": [],
+      "application_process": [],
+      "deadline": null,
+      "official_url": "https://official-application-portal.gov.in",
+      "source_url": "https://official-page-describing-the-scheme.gov.in",
+      "source_document": "Name of the official guideline / notification",
+      "last_verified": null,
+      "status": "verification_required",
+      "rules_complete": false
+    }
+  ],
+  "_field_help": {
+    "category": "One of: Education, Agriculture, Healthcare, Housing, Women & Child, Employment, SC/ST/OBC Welfare, Business",
+    "level": "Central, State or UT",
+    "applicable_state": "All India, or the state/UT name(s)",
+    "gender": "Female, Male, Transgender or null",
+    "social_categories": "e.g. [\"SC\", \"ST\"] or null if not restricted/unknown",
+    "min_education": "One of: Below 10th, 10th pass, 12th pass, Diploma / ITI, Graduate, Post-graduate, Doctorate",
+    "status": "active, closed, discontinued or verification_required",
+    "last_verified": "YYYY-MM-DD - the day you checked it against the official source"
+  }
+}
