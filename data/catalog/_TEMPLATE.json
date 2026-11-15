@@ -4,15 +4,21 @@
     {
       "id": "unique-lowercase-id",
       "scheme_name": "Official scheme name",
-      "aliases": ["Short name"],
+      "aliases": [
+        "Short name"
+      ],
       "category": "Education",
-      "additional_categories": ["SC/ST/OBC Welfare"],
+      "additional_categories": [
+        "SC/ST/OBC Welfare"
+      ],
       "level": "Central",
       "applicable_state": "All India",
       "department": "Ministry / Department name",
       "short_description": "One or two sentences.",
       "detailed_description": null,
-      "eligibility": ["Condition exactly as the official document states it"],
+      "eligibility": [
+        "Condition exactly as the official document states it"
+      ],
       "min_age": null,
       "max_age": null,
       "gender": null,
@@ -31,7 +37,12 @@
       "source_document": "Name of the official guideline / notification",
       "last_verified": null,
       "status": "verification_required",
-      "rules_complete": false
+      "rules_complete": false,
+      "area": null,
+      "bpl_required": null,
+      "minority_required": null,
+      "disability_required": null,
+      "ex_serviceman_required": null
     }
   ],
   "_field_help": {
@@ -42,6 +53,8 @@
     "social_categories": "e.g. [\"SC\", \"ST\"] or null if not restricted/unknown",
     "min_education": "One of: Below 10th, 10th pass, 12th pass, Diploma / ITI, Graduate, Post-graduate, Doctorate",
     "status": "active, closed, discontinued or verification_required",
-    "last_verified": "YYYY-MM-DD - the day you checked it against the official source"
+    "last_verified": "YYYY-MM-DD - the day you checked it against the official source",
+    "area": "Rural, Urban or null",
+    "bpl_required / minority_required / disability_required / ex_serviceman_required": "true only if the official document makes this a requirement, otherwise null"
   }
 }

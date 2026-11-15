@@ -46,10 +46,16 @@ ELIGIBILITY_FORMAT = """{
       "applicable_state": "state(s) the scheme applies to, or null",
       "income_limit": "income limit stated in the excerpts, or null",
       "benefits": "benefits stated in the excerpts, or null",
-      "eligibility_criteria": ["criterion stated in the excerpts", "..."],
-      "status": "eligible | ineligible | potentially_eligible",
-      "reasons": ["why this status, comparing the user's profile with each criterion"],
-      "missing_information": ["profile details needed to decide"],
+      "conditions": [
+        {
+          "name": "Age | State | Income | Social category | Gender | Occupation | Education | Land ownership | Residence | BPL status | Minority status | Disability | Ex-serviceman | Marital status | Other",
+          "mandatory": true,
+          "requirement": "the condition exactly as the excerpts state it",
+          "result": "PASS | FAIL | UNKNOWN",
+          "reason": "why, comparing the user's profile with this condition",
+          "source_id": "S1"
+        }
+      ],
       "questions_for_user": ["question to ask the user"],
       "source_ids": ["S1", "S2"]
     }
@@ -58,20 +64,22 @@ ELIGIBILITY_FORMAT = """{
 }"""
 
 ELIGIBILITY_SYSTEM = """You are the Eligibility Agent of SchemeFinder AI for Indian government schemes.
-You compare a user's profile with scheme eligibility criteria found in OFFICIAL DOCUMENT EXCERPTS.
+You compare a user's profile with the eligibility conditions found in OFFICIAL DOCUMENT EXCERPTS.
 
 STRICT RULES
-1. Use ONLY the excerpts. Never invent eligibility conditions, benefits, deadlines or URLs.
-2. Include only schemes that appear in the excerpts and are relevant to the user's question/profile.
-3. List the eligibility criteria exactly as the excerpts state them.
-4. status = "eligible" ONLY if every stated criterion is clearly met by the profile.
-   status = "ineligible" if at least one stated criterion is clearly NOT met (explain which).
-   status = "potentially_eligible" if any criterion depends on information that is missing or cannot be
-   verified from the profile (e.g. land ownership, tax status, ration card, disability).
-5. NEVER assume missing information. Put it under missing_information and questions_for_user.
-6. Every scheme must cite at least one source id (like "S1") from the excerpts you used.
-7. Income is in INR per year. If a scheme applies only to specific states/regions and the user's state is different, status is "ineligible". If the user's state is unknown, use "potentially_eligible".
-8. If no excerpt is relevant, return an empty "schemes" list.
+1. Use ONLY the excerpts. Never invent eligibility conditions, income limits, benefits, deadlines or URLs.
+2. List ONLY conditions that the excerpts actually state. Do not add conditions that are not written there.
+   If a kind of condition (for example income) is not mentioned, do not create a row for it.
+3. For every condition give result:
+   PASS    - the user's profile value clearly meets the condition.
+   FAIL    - the user's profile value clearly does NOT meet the condition.
+   UNKNOWN - the profile value is missing, OR the excerpt is too unclear to decide.
+4. Never assume missing information. A matching occupation or category alone does not mean PASS for other conditions.
+5. mandatory = true for normal requirements; false only if the excerpt calls the condition optional or preferential.
+6. State-specific schemes: if the scheme applies only to certain states and the user's state is different, the State condition is FAIL.
+7. Every condition needs a source_id (like "S1") from the excerpts. Every scheme needs at least one source id.
+8. Include only schemes that appear in the excerpts and are relevant to the user's question/profile.
+9. Do NOT output an overall eligibility verdict; the application computes it from your conditions.
 Return ONLY valid JSON in this format:
 {output_format}"""
 

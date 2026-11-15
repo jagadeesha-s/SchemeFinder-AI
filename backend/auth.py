@@ -1,5 +1,6 @@
 """Sign up / sign in with email OTP + saved applications (SQLite)."""
 import hashlib
+import json
 import hmac
 import re
 import secrets
@@ -25,6 +26,8 @@ def _conn() -> sqlite3.Connection:
             email TEXT PRIMARY KEY, code_hash TEXT NOT NULL, purpose TEXT NOT NULL,
             name TEXT, expires_at REAL NOT NULL, attempts INTEGER NOT NULL DEFAULT 0,
             sent_at REAL NOT NULL);
+        CREATE TABLE IF NOT EXISTS profiles (
+            email TEXT PRIMARY KEY, data TEXT NOT NULL, updated_at REAL NOT NULL);
         CREATE TABLE IF NOT EXISTS applications (
             id INTEGER PRIMARY KEY AUTOINCREMENT, email TEXT NOT NULL, scheme_name TEXT NOT NULL,
             official_url TEXT, status TEXT NOT NULL, updated_at REAL NOT NULL,
@@ -143,3 +146,30 @@ def list_applications(email: str) -> list[dict]:
             (email,),
         ).fetchall()
     return [dict(r) for r in rows]
+
+
+# -------------------------------------------------------------- profiles
+def save_profile(email: str, profile: dict) -> None:
+    """Stores the cleaned profile (no Aadhaar / bank / password fields exist) as JSON for this user."""
+    with _conn() as conn:
+        conn.execute(
+            "INSERT INTO profiles(email, data, updated_at) VALUES (?,?,?) "
+            "ON CONFLICT(email) DO UPDATE SET data=excluded.data, updated_at=excluded.updated_at",
+            (email, json.dumps(profile, ensure_ascii=False), time.time()),
+        )
+
+
+def load_profile(email: str) -> dict:
+    with _conn() as conn:
+        row = conn.execute("SELECT data FROM profiles WHERE email=?", (email,)).fetchone()
+    if not row:
+        return {}
+    try:
+        return json.loads(row["data"])
+    except (TypeError, ValueError):
+        return {}
+
+
+def delete_profile(email: str) -> None:
+    with _conn() as conn:
+        conn.execute("DELETE FROM profiles WHERE email=?", (email,))

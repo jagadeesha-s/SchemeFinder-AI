@@ -14,6 +14,8 @@ NEW_FIELDS = {
     "min_age": None, "max_age": None, "gender": None, "social_categories": None,
     "income_limit_annual": None, "occupations": None, "min_education": None, "land_required": None,
     "source_url": None, "status": "verification_required", "rules_complete": False,
+    "area": None, "bpl_required": None, "minority_required": None,
+    "disability_required": None, "ex_serviceman_required": None,
 }
 # Taken from text already present in the starter records (ages, gender, occupation, land).
 KNOWN_RULES = {
@@ -22,6 +24,10 @@ KNOWN_RULES = {
     "pmegp": {"min_age": 18},
     "pm-kisan": {"occupations": ["farmer", "agricultur", "cultivat"], "land_required": True},
     "pm-yasasvi": {"additional_categories": ["Education"]},
+    # rural / urban taken from the applicable_state text already in these records
+    "pmay-urban": {"area": "Urban"},
+    "pmay-gramin": {"area": "Rural"},
+    "vb-g-ram-g": {"area": "Rural"},
 }
 
 
